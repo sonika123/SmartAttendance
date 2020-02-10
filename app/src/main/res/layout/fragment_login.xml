@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,68 +7,76 @@
     <LinearLayout
         android:id="@+id/loginFormLayout"
         style="@style/WidthMatchHeightWrap"
-        android:orientation="vertical"
         android:layout_gravity="center_vertical"
         android:gravity="center_horizontal"
+        android:orientation="vertical"
         android:padding="16dp">
+
         <ImageView
             style="@style/WidthWrapHeightWrap"
-            android:layout_height="100dp"
             android:layout_width="100dp"
-            android:src="@drawable/logo_splash"/>
+            android:layout_height="100dp"
+            android:src="@drawable/logo_splash" />
+
         <TextView
             style="@style/WidthMatchHeightWrap"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_horizontal"
             android:text="Login"
             android:textAllCaps="true"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:textSize="30dp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/emailEditText"
             style="@style/WidthMatchHeightWrap"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="30dp"
             android:hint="Username"
-            android:inputType="text"/>
+            android:inputType="text" />
 
-        <RelativeLayout
-            style="@style/WidthMatchHeightWrap">
+        <RelativeLayout style="@style/WidthMatchHeightWrap">
+
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/passwordEditText"
                 style="@style/WidthMatchHeightWrap"
                 android:layout_marginTop="16dp"
-                android:hint="Password"/>
+                android:hint="Password" />
         </RelativeLayout>
 
         <RelativeLayout
             style="@style/WidthMatchHeightWrap"
             android:layout_marginTop="16dp">
+
             <Button
                 android:id="@+id/loginButton"
                 style="@style/WidthMatchHeightWrap"
-                android:layout_marginRight="55dp"
                 android:text="Login"
                 android:textAllCaps="true"
-                android:textSize="16sp"/>
+                android:textColor="@color/white"
+                android:background="@drawable/rectangle"
+                android:textSize="16sp" />
         </RelativeLayout>
 
         <LinearLayout
             style="@style/WidthMatchHeightWrap"
-            android:orientation="vertical"
             android:layout_below="@id/loginFormLayout"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
             <LinearLayout
                 style="@style/WidthMatchHeightWrap"
-                android:orientation="horizontal"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
                 <TextView
                     style="@style/WidthWrapHeightWrap"
-                    android:text="Not Registered? "/>
+                    android:text="Not Registered? " />
+
                 <TextView
                     android:id="@+id/signUpTextView"
                     style="@style/WidthWrapHeightWrap"
                     android:text="Sign up"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorPrimary" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
