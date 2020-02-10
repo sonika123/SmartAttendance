@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import butterknife.Unbinder
+import com.afollestad.materialdialogs.MaterialDialog
 import com.mobsandgeeks.saripaar.ValidationError
 import com.mobsandgeeks.saripaar.Validator
 import org.jetbrains.anko.support.v4.toast
@@ -62,6 +63,20 @@ abstract class BaseFragment : Fragment(), Validator.ValidationListener {
     }
 
     override fun onValidationSucceeded() {
+    }
+
+    fun dialog(message: String?) {
+        if(message == null)
+            return
+        val materialDialog = MaterialDialog.Builder(context!!)
+            .content(message)
+        materialDialog.apply {
+            positiveText("OK")
+            onPositive { dialog, _ ->
+                dialog.dismiss()
+            }
+        }
+        materialDialog.show()
     }
 
     override fun onDestroy() {
