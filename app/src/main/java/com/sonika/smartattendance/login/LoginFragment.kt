@@ -30,6 +30,11 @@ class LoginFragment : BaseFragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        
+    }
+
     companion object {
         fun newInstance(): LoginFragment {
             val fragment = LoginFragment()
