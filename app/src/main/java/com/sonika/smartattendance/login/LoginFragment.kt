@@ -7,6 +7,7 @@ import android.widget.Toast
 import butterknife.BindView
 import butterknife.OnClick
 import com.sonika.smartattendance.R
+import com.sonika.smartattendance.RegistrationFragment.RegistrationFragment
 import com.sonika.smartattendance.WelcomeFragment
 import com.sonika.smartattendance.base.BaseFragment
 import kotlinx.android.synthetic.main.activity_login.*
@@ -21,6 +22,10 @@ class LoginFragment : BaseFragment() {
         loginButton.setOnClickListener{
             val fragment = WelcomeFragment.newInstance()
             changeFragment(fragment)
+        }
+
+        signUpTextView.setOnClickListener {
+            changeFragment(RegistrationFragment.newInstance())
         }
 
     }

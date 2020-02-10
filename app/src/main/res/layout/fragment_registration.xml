@@ -22,7 +22,7 @@
             style="@style/WidthMatchHeightWrap"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_horizontal"
-            android:text="Login"
+            android:text="Registration"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -43,14 +43,23 @@
                 android:hint="Password" />
         </RelativeLayout>
 
+        <RelativeLayout style="@style/WidthMatchHeightWrap">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/confirmPasswordEditText"
+                style="@style/WidthMatchHeightWrap"
+                android:layout_marginTop="16dp"
+                android:hint="Confirm Password" />
+        </RelativeLayout>
+
         <RelativeLayout
             style="@style/WidthMatchHeightWrap"
             android:layout_marginTop="16dp">
 
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/registerButton"
                 style="@style/WidthMatchHeightWrap"
-                android:text="Login"
+                android:text="Register"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:background="@drawable/rectangle"
@@ -70,12 +79,12 @@
 
                 <TextView
                     style="@style/WidthWrapHeightWrap"
-                    android:text="Not Registered? " />
+                    android:text="Already Logged In? " />
 
                 <TextView
-                    android:id="@+id/signUpTextView"
+                    android:id="@+id/loginTextView"
                     style="@style/WidthWrapHeightWrap"
-                    android:text="Sign up"
+                    android:text="Login"
                     android:textColor="@color/colorPrimary" />
             </LinearLayout>
         </LinearLayout>
