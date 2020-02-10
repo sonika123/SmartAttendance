@@ -40,6 +40,7 @@
                 android:id="@+id/passwordEditText"
                 style="@style/WidthMatchHeightWrap"
                 android:layout_marginTop="16dp"
+                android:inputType="textPassword"
                 android:hint="Password" />
         </RelativeLayout>
 
@@ -49,6 +50,7 @@
                 android:id="@+id/confirmPasswordEditText"
                 style="@style/WidthMatchHeightWrap"
                 android:layout_marginTop="16dp"
+                android:inputType="textPassword"
                 android:hint="Confirm Password" />
         </RelativeLayout>
 
