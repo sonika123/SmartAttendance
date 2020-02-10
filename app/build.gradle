@@ -61,6 +61,10 @@ dependencies {
         transitive = true
     }
 
+    //kotpref
+    implementation "com.chibatching.kotpref:kotpref:2.5.0"
+    implementation "com.chibatching.kotpref:initializer:2.5.0"
+
 }
 
 apply plugin: 'com.google.gms.google-services'

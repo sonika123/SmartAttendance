@@ -19,6 +19,7 @@ class WelcomeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        userEmailTextView.text = UserInfo.email
         btn_checkin.setOnClickListener {
             val intent = Intent(context, FingerprintActivity::class.java)
             startActivity(intent)

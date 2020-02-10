@@ -14,6 +14,7 @@ import com.rengwuxian.materialedittext.MaterialEditText
 import com.sonika.smartattendance.MainActivity
 import com.sonika.smartattendance.R
 import com.sonika.smartattendance.RegistrationFragment.RegistrationFragment
+import com.sonika.smartattendance.UserInfo
 import com.sonika.smartattendance.WelcomeFragment
 import com.sonika.smartattendance.base.BaseFragment
 import es.dmoral.toasty.Toasty
@@ -63,6 +64,11 @@ class LoginFragment : BaseFragment() {
             if (task.isSuccessful) {
                 // Sign in success, update UI with the signed-in user's information
                 val user = auth.currentUser
+                UserInfo.apply {
+                    loginStatus = true
+                    email = user?.email.toString()
+                    userId = user?.uid.toString()
+                }
                 Toasty.success(context!!, "Login Successful : ${user?.email}").show()
                 val fragment = WelcomeFragment.newInstance()
                 changeFragment(fragment)
