@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_splash"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"/>
+    <LinearLayout
+        android:id="@+id/welcomeTextLayout"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="30dp"
+            style="@style/WidthMatchHeightWrap"
+            android:gravity="center_horizontal"
+            android:text="Welcome"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:textSize="20dp"
+            style="@style/WidthMatchHeightWrap"
+            android:gravity="center_horizontal"
+            android:text="John"
+            android:textColor="@color/black" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_marginTop="64dp"
+    style="@style/WidthMatchHeightWrap"
+    android:layout_below="@+id/welcomeTextLayout"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_checkin"
+        style="@style/WidthWrapHeightWrap"
+        android:text="checkin"
+        />
+    <Button
+        android:id="@+id/btn_checkout"
+        style="@style/WidthWrapHeightWrap"
+        android:text="checkout"
+        />
+</LinearLayout>
+</RelativeLayout>

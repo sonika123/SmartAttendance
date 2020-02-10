@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContent"
+    style="@style/WidthMatchHeightMatch"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout style="@style/WidthMatchHeightMatch">
+
+        <FrameLayout
+            android:id="@+id/container"
+            style="@style/WidthMatchHeightMatch"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
