@@ -13,23 +13,8 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginFragment : BaseFragment() {
 
-//    @BindView(R.id.loginButton)
-//    lateinit var loginButton: Button
-
     override val layoutId: Int
         get() = R.layout.fragment_login
-
-   /* @OnClick(R.id.loginButton)
-    fun onLoginButtonClicked (view: View?) {
-        when (view?.id) {
-            R.id.loginButton -> {
-                Toast.makeText(context, "hdah", Toast.LENGTH_SHORT).show()
-                val fragment = WelcomeFragment.newInstance()
-                changeFragment(fragment)
-
-            }
-        }
-    }*/
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

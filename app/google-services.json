@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "652489637373",
+    "firebase_url": "https://smart-attendance-46839.firebaseio.com",
+    "project_id": "smart-attendance-46839",
+    "storage_bucket": "smart-attendance-46839.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652489637373:android:c8023aaa29d8920aa66d94",
+        "android_client_info": {
+          "package_name": "com.sonika.smartattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652489637373-6hlqscnhmm0e66noqr9mamlti6554m5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXQTXc5qtjtRd0fVeOXV1BISyZrh9yUDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652489637373-6hlqscnhmm0e66noqr9mamlti6554m5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
