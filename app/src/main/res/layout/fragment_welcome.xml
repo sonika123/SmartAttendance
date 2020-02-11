@@ -49,4 +49,14 @@
         android:text="checkout"
         />
 </LinearLayout>
+
+    <Button
+        android:id="@+id/logoutButton"
+        style="@style/WidthMatchHeightWrap"
+        android:text="Logout"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle"
+        android:layout_alignParentBottom="true"
+        android:textSize="16sp" />
 </RelativeLayout>

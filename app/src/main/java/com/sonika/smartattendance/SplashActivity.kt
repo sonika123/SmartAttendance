@@ -16,8 +16,7 @@ class SplashActivity : AppCompatActivity() {
 
     /*open login page*/
     private fun openLoginActivity() {
-    var intent = Intent(this, MainActivity::class.java)
-       startActivity(intent)
+        startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
 }

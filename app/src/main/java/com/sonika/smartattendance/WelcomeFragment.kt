@@ -3,6 +3,7 @@ package com.sonika.smartattendance
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.google.firebase.auth.FirebaseAuth
 import com.sonika.smartattendance.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_welcome.*
 
@@ -29,18 +30,11 @@ class WelcomeFragment : BaseFragment() {
             val intent = Intent(context, FingerprintActivity::class.java)
             startActivity(intent)
         }
-    }
-   /* @OnClick(R.id.btn_checkin)
-    fun onButtonClicked(view: View?) {
-        when (view?.id) {
-            R.id.btn_checkin -> {
-                val intent = Intent(context, FingerprintActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.btn_checkout -> {
-                val intent = Intent(context, FingerprintActivity::class.java)
-                startActivity(intent)
-            }
+
+        logoutButton.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(context, MainActivity::class.java))
+            activity?.finish()
         }
-    }*/
+    }
 }
