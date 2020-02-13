@@ -60,6 +60,7 @@ class LoginFragment : BaseFragment() {
     }
 
     private fun requestAuthentication() {
+        hideSoftKeyboard()
         val auth = (activity as MainActivity).auth
         showProgressDialog()
         auth.signInWithEmailAndPassword(

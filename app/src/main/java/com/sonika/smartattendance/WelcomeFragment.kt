@@ -27,6 +27,9 @@ class WelcomeFragment : BaseFragment() {
     var isUserCheckedIn: Boolean = false
     var isCheckedOutAlready = false
 
+    var checkInTime: String? = null
+    var checkOutTime: String? = null
+
     companion object {
         fun newInstance(): WelcomeFragment {
             val fragment = WelcomeFragment()
@@ -52,12 +55,12 @@ class WelcomeFragment : BaseFragment() {
         docRef.get().addOnSuccessListener { document ->
             dismissProgressDialog()
             if (document.data != null) {
-                val checkInTime = document.data?.get("CheckInTime")
-                val chekOutTime = document.data?.get("CheckOutTime")
+                checkInTime = document.data?.get("CheckInTime")?.toString()
+                checkOutTime = document.data?.get("CheckOutTime")?.toString()
                 Log.d("TAG", "DocumentSnapshot data: ${document.data.toString()}")
                 isUserCheckedIn = checkInTime != null //if user is checked in or not
                 isCheckedOutAlready =
-                    checkInTime != null && chekOutTime != null //if user has already checked in and checked out
+                    checkInTime != null && checkOutTime != null //if user has already checked in and checked out
                 handleUserStatus()
             } else {
                 isUserCheckedIn = false
@@ -80,6 +83,14 @@ class WelcomeFragment : BaseFragment() {
                 btn_checkin.text = "CHECKIN"
             }
         }
+        var todaysRecordText = ""
+        if(checkInTime?.isNotEmpty() == true){
+            todaysRecordText += "CheckIn Time : $checkInTime"
+        }
+        if(checkOutTime?.isNotEmpty() == true){
+            todaysRecordText += "\nCheckOut Time : $checkOutTime"
+        }
+        todaysRecord.text = todaysRecordText
     }
 
     private fun setOnClickListeners() {
