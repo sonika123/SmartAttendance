@@ -16,6 +16,7 @@ import com.sonika.smartattendance.R
 import com.sonika.smartattendance.RegistrationFragment.RegistrationFragment
 import com.sonika.smartattendance.UserInfo
 import com.sonika.smartattendance.WelcomeFragment
+import com.sonika.smartattendance.base.BaseActivity
 import com.sonika.smartattendance.base.BaseFragment
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_login.*
@@ -38,6 +39,11 @@ class LoginFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if(UserInfo.loginStatus){
+            val fragment = WelcomeFragment.newInstance()
+            fragmentManager?.popBackStack()
+            changeFragment(fragment)
+        }
         loginButton.setOnClickListener {
             mValidator?.validate()
         }
@@ -71,6 +77,7 @@ class LoginFragment : BaseFragment() {
                 }
                 Toasty.success(context!!, "Login Successful : ${user?.email}").show()
                 val fragment = WelcomeFragment.newInstance()
+                fragmentManager?.popBackStack()
                 changeFragment(fragment)
             } else {
                 // If sign in fails, display a message to the user.

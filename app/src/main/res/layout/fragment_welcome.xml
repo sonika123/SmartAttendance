@@ -7,56 +7,76 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo_splash"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="128dp"/>
+        android:layout_marginTop="128dp"
+        android:src="@drawable/logo_splash" />
+
     <LinearLayout
         android:id="@+id/welcomeTextLayout"
         android:layout_width="match_parent"
-        android:layout_centerInParent="true"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:orientation="vertical">
 
         <TextView
-            android:textSize="30dp"
             style="@style/WidthMatchHeightWrap"
             android:gravity="center_horizontal"
             android:text="Welcome"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/userEmailTextView"
-            android:textSize="20dp"
             style="@style/WidthMatchHeightWrap"
             android:gravity="center_horizontal"
             android:text="John"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20dp" />
     </LinearLayout>
-<LinearLayout
-    android:layout_marginTop="64dp"
-    style="@style/WidthMatchHeightWrap"
-    android:layout_below="@+id/welcomeTextLayout"
-    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_checkin"
+    <LinearLayout
+        android:id="@+id/attendButton"
         style="@style/WidthWrapHeightWrap"
-        android:text="checkin"
-        />
-    <Button
-        android:id="@+id/btn_checkout"
-        style="@style/WidthWrapHeightWrap"
-        android:text="checkout"
-        />
-</LinearLayout>
+        android:layout_below="@+id/welcomeTextLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/biometric_face" />
+
+        <TextView
+            android:id="@+id/btn_checkin"
+            style="@style/WidthWrapHeightWrap"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="CHECKIN"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/biometric_finger" />
+
+        <Button
+            android:id="@+id/btn_checkout"
+            style="@style/WidthWrapHeightWrap"
+            android:text="checkout"
+            android:visibility="gone" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/logoutButton"
         style="@style/WidthMatchHeightWrap"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rectangle"
         android:text="Logout"
         android:textAllCaps="true"
         android:textColor="@color/white"
-        android:background="@drawable/rectangle"
-        android:layout_alignParentBottom="true"
         android:textSize="16sp" />
 </RelativeLayout>
