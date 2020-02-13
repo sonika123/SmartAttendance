@@ -10,6 +10,7 @@ import com.sonika.smartattendance.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_welcome.*
 import androidx.annotation.NonNull
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.google.gson.Gson
 import com.sonika.smartattendance.utils.getCurrentTime
 import com.sonika.smartattendance.utils.getFormattedTime
@@ -143,7 +144,7 @@ class WelcomeFragment : BaseFragment() {
             )
             db.collection("attendance_record").document(UserInfo.userId)
                 .collection(getTodaysDate().toString()).document("Record")
-                .set(checkInData)
+                .set(checkInData, SetOptions.merge())
                 .addOnSuccessListener {
                     dismissProgressDialog()
                     btn_checkin.text = "THANKS"
