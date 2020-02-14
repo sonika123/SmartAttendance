@@ -11,7 +11,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         Handler().postDelayed({
             openLoginActivity()
-        }, 5000)
+        }, 2000)
     }
 
     /*open login page*/

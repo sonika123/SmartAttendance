@@ -15,3 +15,8 @@ data class AttendanceRecordResponse(
     @SerializedName("CheckInTime") var checkInTime: String?,
     @SerializedName("CheckOutTime") var checkOutTime: String?
 )
+
+data class WifiInfo(
+    var macAddress: String? = null,
+    var ssid: String? = null
+)
